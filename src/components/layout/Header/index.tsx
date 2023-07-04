@@ -2,13 +2,13 @@ const HEADER_TITLE = '플레이브 100문 100답';
 
 const Header = () => {
   return (
-    <header className="flex justify-center items-center w-full h-11 px-4 rounded-t-2xl bg-neutral-100 select-none">
+    <header className="flex h-11 w-full select-none items-center justify-center rounded-t-2xl bg-neutral-100 px-4">
       <div className="flex items-center gap-1">
-        <div className="w-3 h-3 rounded-xl bg-red-500" />
-        <div className="w-3 h-3 rounded-xl bg-yellow-500" />
-        <div className="w-3 h-3 rounded-xl bg-green-500" />
+        <div className="h-3 w-3 rounded-xl bg-red-500" />
+        <div className="h-3 w-3 rounded-xl bg-yellow-500" />
+        <div className="h-3 w-3 rounded-xl bg-green-500" />
       </div>
-      <div className="flex justify-center grow">
+      <div className="flex grow justify-center">
         <h1>{HEADER_TITLE}</h1>
       </div>
     </header>
