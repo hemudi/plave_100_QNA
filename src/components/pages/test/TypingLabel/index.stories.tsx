@@ -3,7 +3,7 @@ import TypingLabel from '@components/pages/test/TypingLabel';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof TypingLabel> = {
-  title: 'Common/TypingLabel',
+  title: 'Pages/Test/TypingLabel',
   component: TypingLabel,
   tags: ['autodocs'],
 };
