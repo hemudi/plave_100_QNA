@@ -23,17 +23,17 @@ const TypingLabel = ({
   speed = 100,
   color = 'inherit',
 }: TypingLabelProps) => {
-  const [renderText, setRenderText] = useState<string>('');
   const [index, setIndex] = useState<number>(0);
   const [isStop, setIsStop] = useState<boolean>(false);
+  const [renderText, setRenderText] = useState<string>('');
 
   useEffect(() => {
-    if (isStop) return;
+    if (text.length <= 0 || index >= text.length) {
+      setIsStop(() => true);
+      return;
+    }
+
     setRenderText((prev) => (prev || '') + text[index]);
-  }, [index, text, isStop]);
-
-  useEffect(() => {
-    setIsStop(() => text.length <= index || text.length <= 0);
   }, [index, text]);
 
   useInterval(() => !isStop && setIndex((prev) => ++prev), speed, isStop);
