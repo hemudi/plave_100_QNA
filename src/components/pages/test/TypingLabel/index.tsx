@@ -39,7 +39,7 @@ const TypingLabel = ({
   useInterval(() => !isStop && setIndex((prev) => ++prev), speed, isStop);
 
   return (
-    <label className={`${colors[color]}`}>
+    <label className={`${colors[color]} w-full`}>
       {renderText}
       {!isStop && <span>|</span>}
     </label>
