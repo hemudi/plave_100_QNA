@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 interface MemberIconProps {
   type: 'yejun' | 'noah' | 'bamby' | 'eunho' | 'hamin';
-  size: keyof typeof ICON_SIZE;
+  size?: keyof typeof ICON_SIZE;
 }
 
 const ICON_SIZE = {
@@ -28,10 +28,10 @@ const ICON_SRC = {
   hamin: '/assets/images/ic_hamin.png',
 };
 
-const Icon = ({ type, size = 'small' }: MemberIconProps) => {
+const MemberIcon = ({ type, size = 'small' }: MemberIconProps) => {
   return (
     <Image
-      className="rounded-full border border-black"
+      className=" h-full rounded-full border border-black"
       src={ICON_SRC[type]}
       alt={type}
       width={ICON_SIZE[size].width}
@@ -40,4 +40,4 @@ const Icon = ({ type, size = 'small' }: MemberIconProps) => {
   );
 };
 
-export default Icon;
+export default MemberIcon;
