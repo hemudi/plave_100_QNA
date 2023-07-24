@@ -8,11 +8,11 @@ interface MemberReply {
 
 const MemberReply = ({ name, reply }: MemberReply) => {
   return (
-    <div className="flex h-fit w-full items-center justify-center gap-3">
+    <div className="flex h-fit w-full select-none items-center justify-center gap-3">
       <MemberIcon type={name} />
-      <div className="relative flex h-fit flex-1 items-center justify-center rounded-lg border border-blue-950 bg-blue-100 p-2">
+      <div className="relative flex h-fit flex-1 items-center justify-center rounded-lg border-2 border-blue-950 bg-blue-100 p-2">
         <TypingLabel text={reply} color="blue" />
-        <div className="absolute -left-px h-2 w-2 -translate-x-1/2 rotate-45 transform border-b border-l border-blue-950 bg-blue-100"></div>
+        <div className="absolute -left-px h-2 w-2 -translate-x-1/2 rotate-45 transform border-b-2 border-l-2 border-blue-950 bg-blue-100"></div>
       </div>
     </div>
   );

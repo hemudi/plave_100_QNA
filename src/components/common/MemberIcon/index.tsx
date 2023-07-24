@@ -31,7 +31,7 @@ const ICON_SRC = {
 const MemberIcon = ({ type, size = 'small' }: MemberIconProps) => {
   return (
     <Image
-      className=" h-full rounded-full border border-black"
+      className="h-full rounded-full border-2 border-black"
       src={ICON_SRC[type]}
       alt={type}
       width={ICON_SIZE[size].width}
