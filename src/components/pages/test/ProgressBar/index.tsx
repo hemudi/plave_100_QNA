@@ -10,7 +10,7 @@ const getCurrentPercentage = (percentage: number) =>
 
 const ProgressBar = ({ percentage = 0 }: ProgressBarProps) => {
   return (
-    <div className="h-2  w-full overflow-hidden rounded border border-solid border-black bg-slate-300">
+    <div className="h-2  w-full overflow-hidden rounded border-2 border-solid border-black bg-slate-300">
       <div
         className={`h-full bg-blue-600 text-left`}
         style={{

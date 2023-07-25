@@ -1,15 +1,19 @@
 import { ReactNode } from 'react';
 
-interface SectionProps {
+interface QuestionSectionProps {
   title?: string;
   description?: string;
   children: ReactNode;
 }
 
-const Section = ({ title, description, children }: SectionProps) => {
+const QuestionSection = ({
+  title,
+  description,
+  children,
+}: QuestionSectionProps) => {
   return (
-    <section className="flex h-auto w-full flex-col items-center justify-center border border-blue-600 text-blue-600">
-      <div className=" flex w-full flex-col items-center justify-center gap-2 border-b border-blue-600 p-3">
+    <section className="flex h-auto w-full flex-col items-center justify-center border-2 border-black text-blue-600 ">
+      <div className=" flex w-full flex-col items-center justify-center gap-3 border-b-2 border-black p-3">
         {title && (
           <h2 className="text-2xl font-medium shadow-blue-600 drop-shadow-lg">
             {title}
@@ -17,7 +21,7 @@ const Section = ({ title, description, children }: SectionProps) => {
         )}
         {description && (
           <span className="whitespace-pre-line text-xl font-medium leading-5">
-            {description}
+            {`" ${description} "`}
           </span>
         )}
       </div>
@@ -28,4 +32,4 @@ const Section = ({ title, description, children }: SectionProps) => {
   );
 };
 
-export default Section;
+export default QuestionSection;

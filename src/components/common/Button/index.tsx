@@ -5,19 +5,21 @@ interface ButtonProps {
   children: ReactNode;
   shape?: 'square' | 'rounded';
   variant?: 'primary' | 'secondary' | 'dark';
+  size?: 'small' | 'large' | 'full';
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button = ({
   variant = 'primary',
   shape = 'square',
+  size = 'full',
   disabled = false,
   children,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      className={`${VARIANTS_STYLE[variant]} ${SHAPE_STYLE[shape]} h-12 w-full disabled:bg-neutral-300`}
+      className={`${VARIANTS_STYLE[variant]} ${SHAPE_STYLE[shape]} h-12 ${SIZE_STYLE[size]} disabled:bg-neutral-300`}
       disabled={disabled}
       {...props}
     >
@@ -37,6 +39,12 @@ const VARIANTS_STYLE = {
 const SHAPE_STYLE = {
   square: '',
   rounded: 'rounded-xl',
+};
+
+const SIZE_STYLE = {
+  small: 'w-20',
+  large: 'w-40',
+  full: 'w-full',
 };
 
 export default Button;
