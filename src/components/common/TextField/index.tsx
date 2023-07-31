@@ -32,10 +32,9 @@ const TextField = ({
   );
 
   return (
-    <div className="flex w-full gap-1 rounded-xl border border-black p-3">
+    <div className="flex w-full gap-1 rounded-xl border-2 border-black bg-white p-3">
       <input
         className="w-full outline-none"
-        pattern={`.{${minLength}, ${maxLength}}`}
         onChange={handleOnChange}
         value={value}
         {...props}

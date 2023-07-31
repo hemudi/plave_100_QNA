@@ -1,5 +1,6 @@
-import BodyLayout from '@components/layout/BodyLayout';
 import '@styles/globals.css';
+
+import BodyLayout from '@components/layout/BodyLayout';
 
 export const metadata = {
   title: '플레이브 100문 100답 | PLAVE 100 QNA',
